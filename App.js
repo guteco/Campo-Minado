@@ -11,7 +11,7 @@ import {
   hadExplosion,
   wonGame,
   showMines,
-  invertFlag,
+  inverterFlag,
   flagsUsed
 } from './src/functions'
 
@@ -59,7 +59,7 @@ export default class App extends Component {
 
   onSelectField = (row, column) => {
     const board = cloneBoard(this.state.board)
-    invertFlag(board, row, column)
+    inverterFlag(board, row, column)
     const won = wonGame(board)
 
     if (won) {
